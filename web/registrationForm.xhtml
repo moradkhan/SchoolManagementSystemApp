@@ -1,0 +1,74 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <body>
+
+        <ui:composition template="./mainTemplate.xhtml">
+
+            <ui:define name="content">
+                <div class="studentRegistrationForm">
+                    <fieldset id="f1">
+                        <legend id="legend1">Student Registration Form</legend>
+                        <h:form id="registration">
+
+                            <p:panelGrid columns="3">
+
+
+                                <p:outputLabel value="First Name"></p:outputLabel>
+                                <p:outputLabel value=":"></p:outputLabel>
+                                <p:inputText value="#{registration.firstname}" placeholder="Enter Your First Name" size="30"></p:inputText>
+
+                                <p:outputLabel value="Last Name"></p:outputLabel>
+                                <p:outputLabel value=":"></p:outputLabel>
+                                <p:inputText value="#{registration.lastname}" placeholder="Enter Your First Name" size="30"></p:inputText>
+
+                                <p:outputLabel value="User Name"></p:outputLabel>
+                                <p:outputLabel value=":"></p:outputLabel>
+                                <p:inputText value="#{registration.username}" placeholder="Enter Your First Name" size="30"></p:inputText>
+
+                                <p:outputLabel value="Password"></p:outputLabel>
+                                <p:outputLabel value=":"></p:outputLabel>
+                                <p:inputText value="#{registration.password}" placeholder="Enter Your First Name" size="30"></p:inputText>
+
+                                <p:outputLabel value="Gender"></p:outputLabel>
+                                <p:outputLabel value=":"></p:outputLabel>
+                                <p:inputText value="#{registration.gender}" placeholder="Enter Your First Name" size="30"></p:inputText>
+
+                                <p:outputLabel value="Date Of Birth"></p:outputLabel>
+                                <p:outputLabel value=":"></p:outputLabel>
+                                <p:inputText value="#{registration.dob}" placeholder="Enter Your First Name" size="30"></p:inputText>
+
+                                <p:outputLabel value="Nationality"></p:outputLabel>
+                                <p:outputLabel value=":"></p:outputLabel>
+                                <p:inputText value="#{registration.nationality}" placeholder="Enter Your First Name" size="30"></p:inputText>
+
+                                <p:outputLabel value="Email"></p:outputLabel>
+                                <p:outputLabel value=":"></p:outputLabel>
+                                <p:inputText value="#{registration.email}" placeholder="Enter Your First Name" size="30"></p:inputText>
+
+                                <p:outputLabel value="Mobile Number"></p:outputLabel>
+                                <p:outputLabel value=":"></p:outputLabel>
+                                <p:inputText value="#{registration.mobileno}" placeholder="Enter Your First Name" size="30"></p:inputText>
+
+                                <p:outputLabel value="Address"></p:outputLabel>
+                                <p:outputLabel value=":"></p:outputLabel>
+                                <p:inputText value="#{registration.address}" placeholder="Enter Your First Name" size="30"></p:inputText>
+
+                                <p:commandButton value="Submit" action="#{registration.doInsert()}"></p:commandButton>
+                                <h:inputHidden></h:inputHidden>
+                                <p:commandButton value="Reset"></p:commandButton>
+                            </p:panelGrid>
+                        </h:form>
+                    </fieldset>
+                </div>
+            </ui:define>
+
+        </ui:composition>
+
+    </body>
+</html>

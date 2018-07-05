@@ -1,0 +1,66 @@
+.header{
+    border: 1px solid #DDD;
+    margin-bottom: 10px;
+    text-align: center;
+    background-color:#245580;
+    color:activeborder;
+
+}
+.menu{
+   color: #473517;
+   background-color: #473517;
+}
+.content-area{
+    border: 1px solid #DDD;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    padding: 10px;
+    height: 700px;
+    background-image: url("../images/background5.jpg");
+
+}
+.footer{
+    border: 1px solid #DDD;
+    text-align: center;
+
+}
+#registration{
+    text-align: center;   
+    margin-top: 60px;
+    color: white;
+    font-weight: bolder;
+}
+
+.studentRegistrationForm{
+    
+    opacity: 0.7;
+    margin-top: 60px;
+background-position-x: 30px;
+
+}
+
+#legend1{
+    color: #ffffff;
+    text-align: center;
+    font-style: initial;
+    
+}
+#f2{
+   margin-left: 37%;
+   opacity: 0.7;
+    margin-top: 80px;
+    color: white;
+}
+#f1{
+    border: 5px solid black;
+    margin-right: 330px;
+    margin-left: 350px;
+}
+.navbar-default{
+    background-color: #a3e7ab;
+}
+#f3{
+    border: 5px solid black;
+    margin-right: 0px;
+    margin-left: 0px;
+}

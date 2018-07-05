@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+
+    <body>
+
+        <ui:composition template="./originalTemplate.xhtml">
+
+            <ui:define name="content">
+                <div class="studentRegistrationForm">
+                    <fieldset id="f1">
+                        <legend id="legend1">Student Fees Form</legend>
+                        <h:form>
+                            <p:panelGrid columns="3">
+                                <p:outputLabel value="Student Roll Number"></p:outputLabel>
+                                <p:outputLabel value=":"></p:outputLabel>
+                                <p:inputText value="#{fess.rollno}" size="30"></p:inputText>
+
+                                <p:outputLabel value="Fees For Month"></p:outputLabel>
+                                <p:outputLabel value=":"></p:outputLabel>
+                                <p:inputText value="#{fess.date}" size="30"></p:inputText>
+
+                                <p:outputLabel value="Fess Amount"></p:outputLabel>
+                                <p:outputLabel value=":"></p:outputLabel>
+                                <p:inputText value="#{fess.amount}" size="30"></p:inputText>
+
+                                <p:outputLabel value="Receive date"></p:outputLabel>
+                                <p:outputLabel value=":"></p:outputLabel>
+                                <p:inputText value="#{fess.recieveDate}" size="30"></p:inputText>
+
+                                <p:commandButton value="Save" action="originalTemplate.xhtml" actionListener="#{fess.feesInsert()}"></p:commandButton>
+                                <h:inputHidden></h:inputHidden>
+                                <p:commandButton value="Reset"></p:commandButton>
+                            </p:panelGrid>
+                        </h:form>
+                    </fieldset>
+                </div>
+            </ui:define>
+
+        </ui:composition>
+
+    </body>
+</html>

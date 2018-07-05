@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core">
+
+    <body>
+
+        <ui:composition template="./originalTemplate.xhtml">
+
+            <ui:define name="content">
+                <div class="studentRegistrationForm">
+                    <fieldset id="f3">
+                        <legend id="legend1">All Student Fees</legend>
+                        <h:form>
+                          <table  border="1" style="border-collapse: collapse; color: white;background-color: #443113;text-align: center;font-size: 15px">
+                                <tr>
+                                    <th style="padding: 20px;text-align: center">First Name</th>
+                                    <th style="padding: 20px;text-align: center">Last Name</th>
+                                    <th style="padding: 20px;text-align: center">User Name</th>
+                                    <th style="padding: 20px;text-align: center">Password</th>
+                                    <th style="padding: 20px;text-align: center">Gender</th>
+                                    <th style="padding: 20px;text-align: center">Date of Birth</th>
+                                    <th style="padding: 20px;text-align: center">Nationality</th>
+                                    <th style="padding: 20px;text-align: center">Email</th>
+                                    <th style="padding: 20px;text-align: center">Mobile Number</th>
+                                    <th style="padding: 20px;text-align: center">Address</th>
+                                </tr>
+                              <c:forEach var="row" items="#{registration.allStudentShow}">
+                                    <tr style="text-align: center">
+                                        
+                                        <td style="padding: 20px;text-align: center"><h:outputText value="#{row.firstname}"/></td>
+                                        <td><h:outputText value="#{row.lastname}"/></td>
+                                        <td><h:outputText value="#{row.username}"/></td>
+                                        <td><h:outputText value="#{row.password}"/></td>
+                                        <td><h:outputText value="#{row.gender}"/></td>
+                                        <td><h:outputText value="#{row.dob}"/></td>
+                                        <td><h:outputText value="#{row.nationality}"/></td>
+                                        <td><h:outputText value="#{row.email}"/></td>
+                                        <td><h:outputText value="#{row.mobileno}"/></td>
+                                        <td><h:outputText value="#{row.address}"/></td>
+                                        
+                                    </tr>
+                                </c:forEach>
+                            </table>
+                            <h:commandLink value="Home"  action="originalTemplate.xhtml"/>
+                        </h:form>
+                    </fieldset>
+                </div>
+                        </ui:define>
+
+                        </ui:composition>
+
+                        </body>
+                        </html>

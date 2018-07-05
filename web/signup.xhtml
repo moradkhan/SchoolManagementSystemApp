@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+
+    <body>
+
+        <ui:composition template="./mainTemplate.xhtml">
+
+            <ui:define name="content">
+                <fieldset id="f2">
+                    <legend id="legend1">Student Login</legend>
+                    <h:form>
+                        <p:panelGrid columns="3">
+                            <p:outputLabel value="Username"></p:outputLabel>
+                            <p:outputLabel value=":"></p:outputLabel>
+                            <p:inputText value="#{registration.username}" required="true" requiredMessage="Username is Required"></p:inputText>
+
+                            <p:outputLabel value="Password"></p:outputLabel>
+                            <p:outputLabel value=":"></p:outputLabel>
+                            <p:password value="#{registration.password}" required="true" requiredMessage="Password is Required"></p:password>
+
+                            <h:commandButton value="Login" action="#{registration.loginAction()}" style="color: red"></h:commandButton>
+                            <h:inputHidden></h:inputHidden>
+                            <p:commandButton value="Cancel"></p:commandButton>
+
+                        </p:panelGrid>
+                        <h:outputText value="#{registration.message}" style="color: red;font-size: 20px"></h:outputText>
+                    </h:form>
+                </fieldset>
+            </ui:define>
+
+        </ui:composition>
+
+    </body>
+</html>

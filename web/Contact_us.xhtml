@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+
+    <body>
+
+        <ui:composition template="./originalTemplate.xhtml">
+
+            <ui:define name="content">
+                <div class="container">
+                    <div class="row">
+                        <h1 style="text-align: center;color: white">Contact Us Form</h1>
+                        <h:form style="margin-left: 27%">
+                            <p:panelGrid columns="3">
+                                <p:outputLabel value="Name*"></p:outputLabel>
+                                <p:outputLabel value=":"></p:outputLabel>
+                                <p:inputText size="50"></p:inputText>
+                                
+                                <p:outputLabel value="Email*"></p:outputLabel>
+                                <p:outputLabel value=":"></p:outputLabel>
+                                <p:inputText size="50"></p:inputText>
+                                
+                                <p:outputLabel value="Phone*"></p:outputLabel>
+                                <p:outputLabel value=":"></p:outputLabel>
+                                <p:inputText size="50"></p:inputText>
+                                
+                                <p:outputLabel value="Subject*"></p:outputLabel>
+                                <p:outputLabel value=":"></p:outputLabel>
+                                <p:inputText size="50"></p:inputText>
+                                
+                                <p:outputLabel value="Message*"></p:outputLabel>
+                                <p:outputLabel value=":"></p:outputLabel>
+                                <p:inputTextarea cols="52" rows=""></p:inputTextarea>
+                                
+                                <p:commandButton value="Submit"></p:commandButton>
+                                <h:inputHidden></h:inputHidden>                                
+                                <p:commandButton value="Reset"></p:commandButton>
+                            </p:panelGrid>
+                        </h:form>
+                    </div>
+                </div>
+               
+            </ui:define>
+
+        </ui:composition>
+
+    </body>
+</html>

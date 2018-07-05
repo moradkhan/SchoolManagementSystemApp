@@ -1,0 +1,112 @@
+<?xml version='1.0' encoding='UTF-8' ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <h:head>
+        <h:outputStylesheet name="./css/bootstrap.min.css"/>
+        <h:outputStylesheet name="./css/font-awesome.min.css"/>
+        <h:outputStylesheet name="./css/style.css"/>
+        <h:outputScript name="./js/jquery-3.3.1.min.js"/>
+        <h:outputScript name="./js/bootstrap.min.js"/>
+        <title>Facelets Template</title>
+    </h:head>
+
+    <h:body>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 header">
+                    <ui:insert name="header">
+                        <h1>School Management System</h1>
+                        <h6>Manage Employees,Student Fees,Attendance Online</h6>
+                    </ui:insert>
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 menu">
+                    <ui:insert name="menu">
+                        <h:form>  
+                            <p:growl id="messages"/>
+
+                            <p:menubar>
+                                <p:menuitem value="HOME" url="mainTemplate.xhtml"  />
+                                <p:menuitem  value="ABOUT US" url="About Us.xhtml"  />
+                                <p:submenu label="NEW ENTRY">
+                                    <p:submenu label="Add Students Information" >
+                                        <p:menuitem value="Add Students Result" url="sscSubjectNumber.jsp" />     
+                                        <p:menuitem value="Add Registration Information" url="registrationForm.xhtml" />     
+                                    </p:submenu>                                                   
+                                    <p:separator />
+                                    <p:menuitem value="Add Fees" url="AddFees.xhtml" />
+                                    <p:separator />
+                                    <p:menuitem value="Add Attandance" url="#" />
+                                    <p:separator />
+                                    <p:menuitem value="Add Employees" url="#" />
+                                    <p:separator />
+                                    <p:submenu label="Add Salary">                           
+                                        <p:menuitem value="Other" url="#" />
+                                    </p:submenu>                                
+                                </p:submenu>
+
+                                <p:submenu label="REPORTS">
+                                    <p:submenu label="Student Reports">
+                                        <p:menuitem value="Show Student MarkSheet" url="sscSubjectNumber1.jsp" />
+                                        <p:menuitem value="Show Student Information" url="showStudentInformation_1.xhtml" />
+                                    </p:submenu>
+
+                                    <p:separator />
+                                    <p:menuitem value="Fess Reports" url="showFees.xhtml"/>
+                                    <p:separator />
+                                    <p:menuitem value="Attendance Reports" url="#"/>
+                                    <p:separator />
+                                    <p:menuitem value="Employess Reports" url="#"/>
+                                    <p:separator />
+                                    <p:menuitem value="Salary Reports" url="#"/>
+                                </p:submenu>
+
+
+
+                                <p:menuitem value="CHANGE PASSWORD" url="#"/>
+                                <p:menuitem value="CONTACT US" url="Contact_us.xhtml"/>
+
+                                <f:facet name="options">
+                                    <p:inputText style="margin-right:10px" placeholder="Search"/>
+                                    <p:commandButton value="LOGOUT" icon="ui-icon-extlink" action="mainTemplate.xhtml" />
+                                </f:facet>
+                            </p:menubar>
+                        </h:form>
+
+                    </ui:insert>
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 content-area">
+                    <ui:insert name="content">
+
+                    </ui:insert>
+
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-md-12 footer">
+                    <ui:insert name="footer">
+                        <p>Devloped by Morad Hossain</p>
+                        <p>Contact information: <a href="#">
+                                moradkhanfm@gmail.com</a>.</p>
+                    </ui:insert>
+
+                </div>
+            </div>
+        </div>
+
+
+    </h:body>
+
+</html>

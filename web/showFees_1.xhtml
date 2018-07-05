@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core">
+
+    <body>
+
+        <ui:composition template="./originalTemplate.xhtml">
+
+            <ui:define name="content">
+                <div class="studentRegistrationForm">
+                    <fieldset id="f3">
+                        <legend id="legend1">All Student Fees</legend>
+                        <h:form>
+                            <table  border="1" style="border-collapse: collapse; color: white;background-color: #443113;text-align: center;font-size: 20px">
+                                <tr>
+                                    <th style="padding: 20px;text-align: center">Roll Number</th>
+                                    <th style="padding: 20px;text-align: center">Class</th>
+                                    <th style="padding: 20px;text-align: center">Name</th>
+                                    <th style="padding: 20px;text-align: center">Fees For Month</th>
+                                    <th style="padding: 20px;text-align: center">Monthly Fees</th>
+                                    <th style="padding: 20px;text-align: center">Fees Amount</th>
+                                    <th style="padding: 20px;text-align: center">Back Amount</th>
+                                    <th style="padding: 20px;text-align: center">Pending Amount</th>
+                                    <th style="padding: 20px;text-align: center">Paid Date</th>
+                                </tr>
+                                <c:forEach var="row" items="#{fess.stList}">
+                                    <tr style="text-align: center">
+                                        <td style="padding: 20px;text-align: center"><h:outputText value="#{row.rollno}"/></td>
+                                        <td><h:outputText value="#{row.clas}"/></td>
+                                        <td><h:outputText value="#{row.name}"/></td>
+                                        <td><h:outputText value="#{row.date}"/></td>
+                                        <td><h:outputText value="#{row.monthfees}"/></td>
+                                        <td><h:outputText value="#{row.amount}"/></td>
+                                        <td><h:outputText value="#{row.backamount}"/></td>
+                                        <td><h:outputText value="#{row.pendingamount}"/></td>
+                                        <td><h:outputText value="#{row.recieveDate}"/></td>
+                                    </tr>
+                                </c:forEach>
+                            </table>
+                            <h:commandLink value="Home"  action="originalTemplate.xhtml"/>
+                        </h:form>
+                    </fieldset>
+                </div>
+            </ui:define>
+
+        </ui:composition>
+
+    </body>
+</html>
